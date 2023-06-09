@@ -1,4 +1,4 @@
-//Blog:https://https://www.allenliservice.site/hackerrank-js-week1-3-time-conversion/
+//Blog:https://www.allenliservice.site/hackerrank-js-week1-3-time-conversion/
 
 // <strong>solution:</strong>
 // 先了解 AM 與 PM 的時間轉換格式，將 PM 的部分進行分類後，額外增加 12，('12:00:00' 轉換成 '24:00:00'。)
