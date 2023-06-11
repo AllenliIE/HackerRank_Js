@@ -1,0 +1,1 @@
+//Blog:https://www.allenliservice.site/hackerrank-js-week1-6-divisible-sum-pairs/
