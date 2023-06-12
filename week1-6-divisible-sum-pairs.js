@@ -92,3 +92,22 @@ counter++ //3
 
 return counter; //3
 </pre> */
+
+// <strong>Code 1: BigO(n)</strong>
+function divisibleSumPairs(n, k, ar) {
+    // Write your code here
+    let count = {}, 
+        counter = 0
+    
+    for (let i = 0; i < n; i++) {
+        let remainder = ar[i] % k
+        let complement = (k - remainder) % k
+        
+        if (count[complement]) {
+            counter += count[complement]
+        }
+        
+        count[remainder] = count[remainder] ? count[remainder] + 1 : 1
+    }
+    return counter; 
+}
