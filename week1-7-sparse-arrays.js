@@ -40,20 +40,22 @@ function readLine() {
 
 function matchingStrings(strings, queries) {
     // Write your code here
-    let hashTable = {}, result = []
+    let hashTable = {},
+        results = []
     
     for (let i = 0; i < strings.length; i++) {
         hashTable[strings[i]] = (hashTable[strings[i]] || 0) + 1
     }
-    
+
     for (let j = 0; j < queries.length; j++) {
         if (hashTable[queries[j]]) {
-            result[j] = hashTable[queries[j]]
+            results[j] = hashTable[queries[j]]
         } else {
-            result[j] = 0
+            results[j] = 0
         }
     }
-    return result;
+    
+    return results;
 }
 
 function main() {
