@@ -1,4 +1,4 @@
-//Blog:https:https://www.allenliservice.site/hackerrank-js-week2-3-flipping-bits/
+//Blog:https://www.allenliservice.site/hackerrank-js-week2-3-flipping-bits/
 
 // <strong>solution:</strong>
 // 我們將 input 的 n 運用以下方法進行翻轉後回傳：
@@ -24,18 +24,18 @@ process.stdin.setEncoding('utf-8');
 let inputString = '';
 let currentLine = 0;
 
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
+process.stdin.on('data', function (inputStdin) {
+  inputString += inputStdin;
 });
 
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
+process.stdin.on('end', function () {
+  inputString = inputString.split('\n');
 
-    main();
+  main();
 });
 
 function readLine() {
-    return inputString[currentLine++];
+  return inputString[currentLine++];
 }
 
 /*
@@ -46,24 +46,24 @@ function readLine() {
  */
 
 function flippingBits(n) {
-    // Write your code here
-    return ~n >>> 0;
+  // Write your code here
+  return ~n >>> 0;
 }
 
 function main() {
-    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+  const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
 
-    const q = parseInt(readLine().trim(), 10);
+  const q = parseInt(readLine().trim(), 10);
 
-    for (let qItr = 0; qItr < q; qItr++) {
-        const n = parseInt(readLine().trim(), 10);
+  for (let qItr = 0; qItr < q; qItr++) {
+    const n = parseInt(readLine().trim(), 10);
 
-        const result = flippingBits(n);
+    const result = flippingBits(n);
 
-        ws.write(result + '\n');
-    }
+    ws.write(result + '\n');
+  }
 
-    ws.end();
+  ws.end();
 }
 
 /* <strong>FlowChart:</strong>
